@@ -32,7 +32,7 @@ import logging
 # Log the Matplotlib version
 print(f"Matplotlib version: {matplotlib.__version__}")
 logging.basicConfig(
-    filename='simulation_log.txt',
+    filename='eraser_simulation_log.txt',
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
@@ -324,9 +324,9 @@ for step in range(num_steps):
 # Save plots
 fig_internal.tight_layout()
 fig_emergent.tight_layout()
-fig_internal.savefig("internal_states.png")
-fig_emergent.savefig("emergent_states.png")
+fig_internal.savefig("eraser_internal_states.png")
+fig_emergent.savefig("eraser_emergent_states.png")
 plt.close(fig_internal)
 plt.close(fig_emergent)
 
-logging.info("Simulation complete. Plots saved as 'internal_states.png' and 'emergent_states.png'.")
+logging.info("Simulation complete. Plots saved as 'eraser_internal_states.png' and 'eraser_emergent_states.png'.")

@@ -32,7 +32,7 @@ import logging
 # Log the Matplotlib version
 print(f"Matplotlib version: {matplotlib.__version__}")
 logging.basicConfig(
-    filename='simulation_log.txt',
+    filename='nonlocal_simulation_log.txt',
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
@@ -93,7 +93,7 @@ plt.colorbar(label="Probability Density |ψ(xi1,xi2,0)|²")
 plt.xlabel("Internal Space (xi1)")
 plt.ylabel("Internal Space (xi2)")
 plt.title("Initial State in Internal Space")
-plt.savefig("initial_internal_state.png")
+plt.savefig("nonlocal_initial_internal_state.png")
 plt.close()
 
 # Potential
@@ -216,9 +216,9 @@ for step in range(num_steps):
 # Save plots
 fig_internal.tight_layout()
 fig_emergent.tight_layout()
-fig_internal.savefig("internal_states.png")
-fig_emergent.savefig("emergent_states.png")
+fig_internal.savefig("nonlocal_internal_states.png")
+fig_emergent.savefig("nonlocal_emergent_states.png")
 plt.close(fig_internal)
 plt.close(fig_emergent)
 
-logging.info("Simulation complete. Plots saved as 'internal_states.png' and 'emergent_states.png'.")
+logging.info("Simulation complete. Plots saved as 'nonlocal_internal_states.png' and 'nonlocal_emergent_states.png'.")
