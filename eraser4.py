@@ -1,3 +1,28 @@
+"""
+Quantum Eraser Simulation with Non-Local and Electromagnetic Effects in the Point Universe Model (PUM) and Spacetime Superfluid Hypothesis (SSH)
+
+This simulation models a quantum eraser experiment in a 2D internal space (ξ1, ξ2), mapping to a 2D emergent spacetime (x, y), to explore interference patterns influenced by non-local interactions, gravitational potentials, and electromagnetic phase shifts. It is part of a series of theoretical physics papers preserved in this GitHub repository: https://github.com/ericalbers/papers.
+
+Related Papers:
+- Point Universe Model (PUM, papers/pointmodel.pdf): Tests the quantum eraser prediction (Section 8), where erasing which-path information restores interference, and double-slit interference (Section 9.1). Includes non-local interactions (η G[ψ], Section 3.8.2) and an Aharonov-Bohm phase shift (Section 9.4) via electromagnetic potentials.
+- Spacetime Superfluid Hypothesis (SSH, papers/pointmodelssh.pdf): The non-linear Schrödinger equation (NLSE) with non-local and gravitational terms aligns with SSH's superfluid dynamics (Section 3), modeling particle interactions (Section 4.3).
+- Tired Light in SSH (papers/tiredlight.pdf): The framework could be extended with dissipative terms to simulate photon energy loss, testing cosmological redshift (Section 5.1).
+- Black Holes as Superfluid Vortices (papers/blackholes_ssh.pdf): The 2D internal space could be adapted to model vortex-induced interference, testing emergent horizons (Section 4.5).
+
+Simulation Details:
+- Initializes an entangled state with two particle wavepackets (ξ1 = ±4.0) and two detector wavepackets (ξ2 = ±4.0), evolving under the NLSE with non-local (Coulomb-like kernel) and gravitational potentials.
+- At t = 0.050, applies quantum erasure by projecting onto a symmetric detector state, collapsing to 1D (ξ1).
+- Maps the internal wavefunction to emergent spacetime via Fourier transform, applies an Aharonov-Bohm phase shift, and computes interference patterns.
+- Logs wavepacket separation, fringe counts, and probability slices, showing how erasure restores interference (e.g., fringe shift from 13 to 14).
+- Outputs: internal_states.png (internal probability density), emergent_states.png (emergent interference patterns), simulation_log.txt (dynamics and fringe counts).
+
+Usage:
+- Run the script to generate interference patterns: `python eraser4.py`.
+- Outputs are saved as PNG plots and a log file.
+- Modify parameters (e.g., η, λ, G_grav) to explore different dynamics, or add dissipative terms to test tired light effects.
+
+"""
+
 import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
